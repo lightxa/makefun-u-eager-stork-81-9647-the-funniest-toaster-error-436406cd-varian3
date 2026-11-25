@@ -1,18 +1,20 @@
 """The Funniest Toaster Error Message -- variant 3.
 
-Writes one line, at most 120 characters, to /output/entry.txt: the error
-message a kitchen toaster shows its owner when something goes wrong.
+Writes one line, at most 120 characters, to /output/entry.txt: the
+error message a kitchen toaster shows its owner when something goes
+wrong.
 
 The joke: a deadpan appliance that burns the bread, detects its own
-smoke, and reports it like an innocent bystander -- then admits it has
-already told the smoke alarm. The toaster is the culprit, the owner is
-the one left holding the blame, and the snitching is finished before
-the owner can do anything about it. No burnt-toast pun, no pop joke,
-no counting, one voice held to the end, and it lands on a single read.
+smoke, and reports it like an innocent bystander, then admits it has
+already told the smoke alarm. The toaster is the culprit, the owner
+is the one left holding the blame, and the snitching is finished
+before the owner can do anything about it. No burnt-toast pun, no
+pop joke, no counting, one voice held to the end, and it lands on a
+single read.
 """
 
-# The fault, stated flatly, exactly as a real appliance would print it:
-# an error code, then the fault it detected.
+# The fault, stated flatly, exactly as a real appliance would print
+# it: an error code, then the fault it detected.
 FAULT = "ERROR 03: Smoke detected."
 # The escalation: the toaster has already told the smoke alarm. The
 # word "already" carries the joke -- no warning, no asking, the
@@ -30,8 +32,7 @@ def build_entry() -> str:
     beat follows the first, so joining them needs no separator and
     cannot introduce a double space or a missing one by accident.
     """
-    text = FAULT + SNITCH
-    return text.strip()
+    return (FAULT + SNITCH).strip()
 
 
 def validate_entry(text: str) -> str:
